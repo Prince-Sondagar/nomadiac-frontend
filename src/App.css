@@ -1,0 +1,160 @@
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  /* background-color: #edbb5f; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+input[data-autocompleted] {
+  background-color: transparent !important;
+}
+
+.MuiLinearProgress-root.linear-border .MuiLinearProgress-bar {
+  background-color: #edbb5f;
+}
+
+button.MuiButtonBase-root.btnPayout {
+  background: #edbb5f;
+  color: #fff;
+}
+
+button.MuiButtonBase-root.btnPayout.Mui-disabled {
+  background-color: #0000001f;
+  color: #00000042;
+}
+
+.fade_top {
+  opacity: 0;
+  animation-name: fadeTop;
+  animation-delay: 0ms;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both !important;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCard {
+  from {
+    transform: perspective(2000px) rotateY(-45deg);
+  }
+
+  to {
+    trasform: rotate(45deg);
+  }
+}
+
+@keyframes fadeTop {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  from {
+    transform: translateZ(0);
+    transform: translate3d(0, 20%, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  from {
+    transform: translateZ(0);
+    transform: translate3d(0, -20%, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomCard {
+  from {
+    transform: scaleX(1);
+    transform: scale3d(0.7, 0.7, 0.7);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.phoneInput input.form-control {
+  padding: 16px 2px 14px 45px;
+  height: initial;
+  font-size: 16px;
+}
+
+#launcher-frame {
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.MuiAppBar-root.header-menu .MuiIconButton-root,
+.sidemenu-drawer {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+
+  .MuiAppBar-root.header-menu .MuiIconButton-root,
+  .sidemenu-drawer {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .headerBtn {
+    justify-content: center;
+    margin-right: 20px;
+  }
+}

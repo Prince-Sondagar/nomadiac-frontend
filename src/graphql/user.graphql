@@ -1,0 +1,94 @@
+mutation UpdateUser($userInput: UpdateUserInput!){
+  updateUser(user: $userInput){
+    response {
+      status
+      error
+      message
+    }
+    
+     user {
+      id
+      firstName
+      lastName
+      status
+      email
+      createdAt
+      updatedAt
+      emailVerified
+      
+
+      roles {
+        id
+        role
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
+
+mutation ActivateUser($userInput: UserIdInput!){
+  activateUser(user: $userInput){
+    response {
+      status
+      message
+      error
+    }
+
+    user {
+      id
+      firstName
+      lastName
+      status
+      email
+      createdAt
+      updatedAt
+      emailVerified
+
+      roles {
+        id
+        role
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
+
+mutation DeactivateUser($userInput: UserIdInput!){
+  deactivateUser(user: $userInput){
+    response {
+      status
+      message
+      error
+    }
+
+    user {
+      id
+      firstName
+      lastName
+      status
+      email
+      emailVerified
+      createdAt
+      updatedAt
+
+      roles {
+        id
+        role
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
+
+mutation UpdatePassword($updatePasswordInput: UpdatePasswordInput!) {
+  updatePassword(updatePasswordInput: $updatePasswordInput) {
+    response {
+      status
+      error
+      message
+    }
+  }
+}

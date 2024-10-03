@@ -1,0 +1,27 @@
+
+.layout-container {
+background-color: var(--amplify-colors-background-secondary);
+width: 100% !important;
+}
+
+
+.page-container {
+    padding-top: 70px;
+    transition: padding 0.5s;   
+    overflow-x: hidden;
+}
+
+@media (max-width: 1024px) {
+    .page-container {
+        padding-left: 0 !important;
+    }
+}
+
+
+
+.card-title {
+font-weight: 600;
+}
+
+    
+

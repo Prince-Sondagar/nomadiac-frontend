@@ -1,0 +1,71 @@
+mutation CreatePanelist($registerPanelistInput: RegisterPanelistInput!) {
+  createPanelist(registerPanelistInput: $registerPanelistInput) {
+    response {
+      status
+      error
+      message
+    }
+    panelist {
+      id
+    }
+  }
+}
+
+mutation UpdatePanelist($updatePanelistInput: UpdatePanelistInput!) {
+  updatePanelist(updatePanelistInput: $updatePanelistInput) {
+    response {
+      status
+      error
+      message
+    }
+  }
+}
+
+mutation handleBlockUnblockPromotionMain($updatePanelistInput: UpdatePanelistInput!) {
+  updatePanelist(updatePanelistInput: $updatePanelistInput) {
+    response {
+      status
+      error
+      message
+      name
+    }
+  }
+}
+
+mutation CreateWithdrawalRequest($createPaymentWithdrawalRequest: CreatePaymentWithdrawalRequest!) {
+  createWithdrawalRequest(createPaymentWithdrawalRequest: $createPaymentWithdrawalRequest) {
+      response {
+      status
+      error
+      message
+    }
+    paymentWithdrawal {
+      id
+      status
+      panelistId
+      points
+      createdAt
+      updatedAt
+    }
+  }
+}
+
+query FetchPanelistPointHistory($fetchPanelistPointHistory: FetchPanelistPointHistory!) {
+  fetchPanelistPointHistory(fetchPanelistPointHistory: $fetchPanelistPointHistory) {
+    pointHistory {
+      id
+      details
+      panelistId
+      surveyId
+      points
+      createdAt
+      updatedAt
+    }
+    pagination {
+      page
+      limit
+      totalCount
+      totalPages
+    }
+  }
+}

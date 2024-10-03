@@ -1,0 +1,19 @@
+mutation GenerateOtp($generateOtpInput: SendOtpToPanelistCodeInput!) {
+  generateOtp(generateOtpInput: $generateOtpInput) {
+    response {
+      status
+      error
+      message
+    }
+  }
+}
+
+mutation VerifyOtp($verifyOtpInput: VerifyOtpInput!) {
+  verifyOtp(verifyOtpInput: $verifyOtpInput) {
+    response {
+      status
+      error
+      message
+    }
+  }
+}

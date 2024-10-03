@@ -1,0 +1,19 @@
+query FetchPaymentWithdrawals($paymentWithdrawalsInput: FetchPaymentWithdrawalsInput!) {
+  fetchPaymentWithdrawals(paymentWithdrawalsInput: $paymentWithdrawalsInput) {
+    pagination {
+      page
+      limit
+      totalCount
+      totalPages
+    }
+    paymentWithdrawals {
+      id
+      status
+      type
+      panelistId
+      points
+      createdAt
+      updatedAt
+    }
+  }
+}

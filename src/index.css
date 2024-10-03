@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+}
+
+.welcomePage {
+  font-family: 'Playfair Display', serif;
+}
+
+.welcomePage p.MuiTypography-root {
+  font-family: 'Playfair Display', serif !important;
+}
+
+.welcomePage button.MuiButtonBase-root,
+.welcomePage button {
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+
+.login-footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 600px) {
+  .logo {
+    height: 150px;
+  }
+  .login-footer{
+    display: flex;
+    flex-direction: column !important;
+    text-align: center;
+  } 
+}
+
+
+

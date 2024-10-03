@@ -1,0 +1,89 @@
+query FetchPanelistFusionSurvey(
+  $fetchFusionSurveyInput: FetchFusionSurveyInput!
+) {
+  fetchPanelistFusionSurvey(fetchFusionSurveyInput: $fetchFusionSurveyInput) {
+    response {
+      status
+      error
+      message
+      name
+    }
+    respondentId
+    memberId
+    surveys {
+      surveyId
+      cpi
+      estimatedLoi
+      fullOrPartialMatch
+      entryLink
+    }
+  }
+}
+
+query FetchLucidSurveys($fetchLucidSurveysInput: FetchLucidSurveyForPanelistInput!) {
+  fetchLucidSurveys(fetchLucidSurveysInput: $fetchLucidSurveysInput) {
+    response {
+      message
+      status
+    }
+
+    surveys {
+      id
+      surveyId
+      quotaLeft
+      cpi
+      conversionRate
+      interviewLength
+      forCountry
+      conversionRate
+      earningsPerClick
+      surveyScore
+      createdAt
+      updatedAt
+    }
+
+    pagination {
+      page
+      limit
+      totalPages
+      totalCount
+    }
+  }
+}
+
+mutation ValidateLucidSurvey(
+  $validateLucidSurveyInput: ValidateLucidSurveyInput!
+) {
+  validateLucidSurvey(validateLucidSurveyInput: $validateLucidSurveyInput) {
+    response {
+      status
+      message
+    }
+
+    url
+    local
+  }
+}
+
+mutation ContinueTakingLucidSurvey($continueTakingLucidSurvey: ContinueTakingLucidSurvey!){
+  continueTakingLucidSurvey(continueTakingLucidSurvey:$continueTakingLucidSurvey){
+    response{
+      status
+      error
+    }
+    
+    url
+    local
+  }
+}
+
+query ValidateLucidSurveyAvailability($validateSurveyAvailabilityInput: ValidatePanelistSurveyAvailabilityInput!){
+  validateLucidSurveyAvailability(validateSurveyAvailabilityInput:$validateSurveyAvailabilityInput){
+    response{
+      status
+      message
+    }
+    
+    surveyAvailable
+  }
+}
